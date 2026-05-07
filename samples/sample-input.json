@@ -1,0 +1,19 @@
+{
+  "items": [
+    {
+      "id": "dashboard-1",
+      "title": "横断ダッシュボード・履歴・優先度管理 サンプル 1",
+      "project": "cross-project-dashboard-priority-history",
+      "priority": "P0",
+      "status": "ready",
+      "lastUpdated": "2026-05-08"
+    },
+    {
+      "id": "dashboard-missing-required",
+      "title": "必須項目不足サンプル",
+      "priority": "P0",
+      "status": "ready",
+      "lastUpdated": "2026-05-08"
+    }
+  ]
+}
