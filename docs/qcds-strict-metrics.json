@@ -191,7 +191,7 @@
           "description": "docs ZIPが生成済みである",
           "kind": "zip",
           "pass": true,
-          "detail": "cross-project-dashboard-priority-history-docs.zip 10024 bytes"
+          "detail": "cross-project-dashboard-priority-history-docs.zip exists and exceeds minimum size"
         }
       ]
     },
