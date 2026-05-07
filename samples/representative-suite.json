@@ -1,0 +1,114 @@
+{
+  "product": "cross-project-dashboard-priority-history",
+  "title": "横断プロジェクト優先度履歴ダッシュボード",
+  "benchmarkRepos": [
+    "Sunmax0731/movie-telop-transcriber",
+    "Sunmax0731/codex-remote-android"
+  ],
+  "requiredFields": [
+    "project",
+    "priority",
+    "status",
+    "lastUpdated"
+  ],
+  "scenarios": [
+    {
+      "id": "happy-path",
+      "purpose": "複数プロジェクトの優先度、状態、更新履歴の正常入力を確認する",
+      "input": {
+        "items": [
+          {
+            "id": "cross-project-dashboard-priority-history-happy",
+            "title": "横断プロジェクト優先度履歴ダッシュボード happy",
+            "project": "cross-project-dashboard-priority-history",
+            "priority": "P0",
+            "status": "ready",
+            "lastUpdated": "2026-05-08"
+          }
+        ]
+      },
+      "expected": {
+        "result": "passed",
+        "errors": 0,
+        "warnings": 0
+      }
+    },
+    {
+      "id": "missing-required",
+      "purpose": "必須項目不足をerrorとして検出する",
+      "input": {
+        "items": [
+          {
+            "id": "cross-project-dashboard-priority-history-missing-required",
+            "title": "横断プロジェクト優先度履歴ダッシュボード missing-required",
+            "priority": "P0",
+            "status": "ready",
+            "lastUpdated": "2026-05-08"
+          }
+        ]
+      },
+      "expected": {
+        "result": "failed",
+        "errors": 1,
+        "warnings": 0
+      }
+    },
+    {
+      "id": "blocked-status",
+      "purpose": "blocked状態をwarningとして検出する",
+      "input": {
+        "items": [
+          {
+            "id": "cross-project-dashboard-priority-history-blocked",
+            "title": "横断プロジェクト優先度履歴ダッシュボード blocked",
+            "project": "cross-project-dashboard-priority-history",
+            "priority": "P0",
+            "status": "blocked",
+            "lastUpdated": "2026-05-08"
+          }
+        ]
+      },
+      "expected": {
+        "result": "warning",
+        "errors": 0,
+        "warnings": 1
+      }
+    },
+    {
+      "id": "mixed-batch",
+      "purpose": "正常、必須不足、警告を同一バッチで集計する",
+      "input": {
+        "items": [
+          {
+            "id": "cross-project-dashboard-priority-history-happy",
+            "title": "横断プロジェクト優先度履歴ダッシュボード happy",
+            "project": "cross-project-dashboard-priority-history",
+            "priority": "P0",
+            "status": "ready",
+            "lastUpdated": "2026-05-08"
+          },
+          {
+            "id": "cross-project-dashboard-priority-history-missing-required",
+            "title": "横断プロジェクト優先度履歴ダッシュボード missing-required",
+            "priority": "P0",
+            "status": "ready",
+            "lastUpdated": "2026-05-08"
+          },
+          {
+            "id": "cross-project-dashboard-priority-history-blocked",
+            "title": "横断プロジェクト優先度履歴ダッシュボード blocked",
+            "project": "cross-project-dashboard-priority-history",
+            "priority": "P0",
+            "status": "blocked",
+            "lastUpdated": "2026-05-08"
+          }
+        ]
+      },
+      "expected": {
+        "result": "failed",
+        "errors": 1,
+        "warnings": 1
+      }
+    }
+  ]
+}
