@@ -5,7 +5,7 @@
   "type": "module",
   "description": "複数プロジェクトの優先度、状態、更新履歴を集計し、次に見るべき対象を示す。",
   "scripts": {
-    "test": "node --test tests/*.test.mjs",
+    "test": "node --test tests/*.test.mjs && node tools/qcds-evaluate.mjs",
     "validate": "npm test",
     "start": "node src/cli.mjs samples/sample-input.json dist/run"
   },
