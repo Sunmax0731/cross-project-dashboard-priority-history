@@ -2,7 +2,7 @@
   "items": [
     {
       "id": "cross-project-dashboard-priority-history-1",
-      "title": "横断ダッシュボード・履歴・優先度管理 サンプル 1",
+      "title": "横断プロジェクト優先度履歴ダッシュボード サンプル1",
       "status": "ready",
       "project": "cross-project-dashboard-priority-history",
       "priority": "P0",

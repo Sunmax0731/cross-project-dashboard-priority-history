@@ -4,11 +4,11 @@ import { analyzeItems, renderMarkdownReport } from '../src/core.mjs';
 
 test('valid sample passes required field checks', () => {
   const report = analyzeItems({ items: [{
-  "id": "dashboard-1",
-  "title": "横断ダッシュボード・履歴・優先度管理 サンプル 1",
+  "id": "cross-project-dashboard-priority-history-1",
+  "title": "横断プロジェクト優先度履歴ダッシュボード サンプル1",
+  "status": "ready",
   "project": "cross-project-dashboard-priority-history",
   "priority": "P0",
-  "status": "ready",
   "lastUpdated": "2026-05-08"
 }] });
   assert.equal(report.summary.result, 'passed');
@@ -17,10 +17,10 @@ test('valid sample passes required field checks', () => {
 
 test('missing required field is reported', () => {
   const report = analyzeItems({ items: [{
-  "id": "dashboard-missing-required",
+  "id": "cross-project-dashboard-priority-history-missing-required",
   "title": "必須項目不足サンプル",
-  "priority": "P0",
   "status": "ready",
+  "priority": "P0",
   "lastUpdated": "2026-05-08"
 }] });
   assert.equal(report.summary.result, 'failed');
