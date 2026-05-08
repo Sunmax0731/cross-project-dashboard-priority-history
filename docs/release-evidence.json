@@ -1,0 +1,32 @@
+{
+  "product": "cross-project-dashboard-priority-history",
+  "repository": "Sunmax0731/cross-project-dashboard-priority-history",
+  "githubUrl": "https://github.com/Sunmax0731/cross-project-dashboard-priority-history",
+  "tag": "v0.1.0-alpha.1",
+  "releaseUrl": "https://github.com/Sunmax0731/cross-project-dashboard-priority-history/releases/tag/v0.1.0-alpha.1",
+  "prerelease": true,
+  "latest": false,
+  "assetCount": 3,
+  "assets": [
+    "cross-project-dashboard-priority-history-docs.zip",
+    "manual-test.md",
+    "strict-manual-test-addendum.md"
+  ],
+  "platformRuntimeGate": "dist/platform-runtime-gate-result.json",
+  "platformType": "cli-release-tool",
+  "manualTest": "not-run-by-codex",
+  "qcdsEvaluation": {
+    "Quality": "S-",
+    "Cost": "S-",
+    "Delivery": "S-",
+    "Satisfaction": "S-",
+    "capReason": "manual-test-not-run-by-codex"
+  },
+  "github": {
+    "repo": "Sunmax0731/cross-project-dashboard-priority-history",
+    "url": "https://github.com/Sunmax0731/cross-project-dashboard-priority-history",
+    "releaseUrl": "https://github.com/Sunmax0731/cross-project-dashboard-priority-history/releases/tag/v0.1.0-alpha.1",
+    "prerelease": true,
+    "latest": false
+  }
+}

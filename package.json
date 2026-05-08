@@ -5,9 +5,11 @@
   "type": "module",
   "description": "複数プロジェクトの優先度、状態、更新履歴を横断して確認する。",
   "scripts": {
-    "test": "node --test tests/*.test.mjs && node tools/qcds-evaluate.mjs",
+    "test": "node --test tests/*.test.mjs && node tools/qcds-evaluate.mjs && node tools/platform-runtime-gate.mjs && node tools/closed-alpha-guard.mjs",
     "validate": "npm test",
-    "start": "node src/cli.mjs samples/sample-input.json dist/run"
+    "start": "node src/cli.mjs samples/sample-input.json dist/run",
+    "platform:gate": "node tools/platform-runtime-gate.mjs",
+    "closed-alpha:guard": "node tools/closed-alpha-guard.mjs"
   },
   "keywords": [
     "projectmanagement",
